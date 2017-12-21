@@ -49,8 +49,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\EngineerPool.cs" />
+    <Compile Include="Provider\Interfaces\IEngineerPool.cs" />
+    <Compile Include="Provider\Interfaces\IEngineerPoolFactory.cs" />
+    <Compile Include="Provider\Interfaces\IRandomAdapter.cs" />
+    <Compile Include="Provider\Interfaces\IRule.cs" />
+    <Compile Include="Provider\Interfaces\IRuleEvaluator.cs" />
+    <Compile Include="Provider\Interfaces\IScheduleGeneratorService.cs" />
+    <Compile Include="Provider\Interfaces\IScheduleStrategy.cs" />
+    <Compile Include="Provider\NextSlotScheduleStrategy.cs" />
+    <Compile Include="Provider\RuleEvaluator.cs" />
+    <Compile Include="Provider\ScheduleGeneratorService.cs" />
+    <Compile Include="Provider\SequentialFillScheduleStrategy.cs" />
     <Compile Include="Repositories\EngineerRepository.cs" />
     <Compile Include="Repositories\IEngineerRepository.cs" />
+    <Compile Include="Rules\ConsecutiveDays.cs" />
+    <Compile Include="Rules\IConsecutiveDays.cs" />
+    <Compile Include="Rules\IShifts.cs" />
+    <Compile Include="Rules\Shifts.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL.CORE\BL.CORE.csproj">
@@ -66,5 +82,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
