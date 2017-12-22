@@ -1,4 +1,4 @@
-﻿namespace DAL.ContextData
+﻿namespace DAL.DataContext
 {
     public class Engineer
     {

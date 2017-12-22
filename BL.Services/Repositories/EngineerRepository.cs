@@ -1,9 +1,9 @@
 ﻿using BL.CORE;
-using DAL.ContextData;
+using DAL.DataContext;
 
 namespace BL.Services.Repositories
 {
-    class EngineerRepository : EntityRepository<Engineer, WheelContext>, IEngineerRepository
+    public class EngineerRepository : EntityRepository<Engineer, WheelContext>, IEngineerRepository
     {
         public EngineerRepository(IDataContextFactory<WheelContext> databaseFactory) : base(databaseFactory)
         {

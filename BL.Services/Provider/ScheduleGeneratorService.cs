@@ -3,7 +3,7 @@ using System.Linq;
 using BL.Services.Provider.Interfaces;
 using DAL.DataContext;
 
-namespace SupportWheel.BusinessImplementations.Services
+namespace BL.Services.Provider
 {
     public class ScheduleGeneratorService : IScheduleGeneratorService
     {

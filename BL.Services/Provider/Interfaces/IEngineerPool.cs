@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DAL.ContextData;
+using DAL.DataContext;
 
 namespace BL.Services.Provider.Interfaces
 {

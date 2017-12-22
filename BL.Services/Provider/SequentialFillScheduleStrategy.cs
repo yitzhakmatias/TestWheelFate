@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using BL.Services.Provider.Interfaces;
-using DAL.ContextData;
 using DAL.DataContext;
 
-namespace SupportWheel.BusinessImplementations.Services
+namespace BL.Services.Provider
 {
     /// <summary>
     /// Attemp to fill the schedule a slot at a time. For each slot, pick an engineer at random and
@@ -12,7 +11,7 @@ namespace SupportWheel.BusinessImplementations.Services
     /// </summary>
     public class SequentialFillScheduleStrategy : IScheduleStrategy
     {
-        private IRuleEvaluator _ruleEvaluator;
+        private readonly IRuleEvaluator _ruleEvaluator;
 
         public SequentialFillScheduleStrategy(IRuleEvaluator ruleEvaluator)
         {

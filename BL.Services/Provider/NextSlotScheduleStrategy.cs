@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using BL.Services.Provider.Interfaces;
-using DAL.ContextData;
 using DAL.DataContext;
 
-namespace SupportWheel.BusinessImplementations.Services
+namespace BL.Services.Provider
 {
     /// <summary>
     /// Rather than trying to find the best candidate for a fixed slot, this algorithm
@@ -12,7 +11,7 @@ namespace SupportWheel.BusinessImplementations.Services
     /// </summary>
     public class NextSlotScheduleStrategy : IScheduleStrategy
     {
-        private IRuleEvaluator _ruleEvaluator;
+        private readonly IRuleEvaluator _ruleEvaluator;
 
         public NextSlotScheduleStrategy(IRuleEvaluator ruleEvaluator)
         {
@@ -23,7 +22,7 @@ namespace SupportWheel.BusinessImplementations.Services
         {
             // Populate the shift schedule without engineers
             var shifts = new List<Shift>(shiftsPerPeriod);
-            for(int i = 0; i < shiftsPerPeriod; i++)
+            for(var i = 0; i < shiftsPerPeriod; i++)
             {
                 shifts.Add(new Shift(i));
             }

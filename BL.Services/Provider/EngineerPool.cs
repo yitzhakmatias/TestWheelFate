@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using BL.Services.Provider.Interfaces;
-using DAL.ContextData;
+using DAL.DataContext;
 
-namespace SupportWheel.BusinessImplementations.Services
+namespace BL.Services.Provider
 {
     public class EngineerPool : IEngineerPool
     {

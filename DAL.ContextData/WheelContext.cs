@@ -2,7 +2,7 @@
 using System.Data.Entity.Core.Objects;
 using BL.CORE;
 
-namespace DAL.ContextData
+namespace DAL.DataContext
 {
     public class WheelContext : DbContext, IDbContext
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BL.CORE;
-using DAL.ContextData;
+using DAL.DataContext;
 
 namespace BL.Services.Repositories
 {

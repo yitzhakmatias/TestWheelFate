@@ -2,7 +2,7 @@
 using BL.Services.Provider.Interfaces;
 using DAL.DataContext;
 
-namespace SupportWheel.BusinessImplementations.Services
+namespace BL.Services.Provider
 {
     /// <summary>
     /// TODO could replace this with a Decorator class for IRule
