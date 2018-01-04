@@ -34,12 +34,12 @@ namespace BL.Services.Provider
             {
                 for (int i = 0; i < shiftsPerPeriod; i++)
                 {
-                    if (shifts[i].Engineer == null)
+                    if (shifts[i].Tasks == null)
                     {
-                        var foundSuitableSlot = _ruleEvaluator.IsValid(i, candidate.ID, shifts);
+                        var foundSuitableSlot = _ruleEvaluator.IsValid(i, candidate.EngineerId, shifts);
                         if (foundSuitableSlot)
                         {
-                            shifts[i].Engineer = candidate;
+                            shifts[i].Tasks = candidate.Tasks;
                             engineerPool.Remove(candidate);
                             break;
                         }

@@ -13,27 +13,28 @@ namespace BL.Services.Rules
         public bool IsShiftValid(int shiftId, int candidateId, List<Shift> shifts)
         {
             // If there are currently no shifts then this proposal is valid
-            if (shifts.Count(x => x.Engineer != null) == 0)
+            if (shifts.Count(x => x.Tasks != null) == 0)
             {
                 return true;
             }
             else if (shiftId % 2 == 1)
             {
                 //Its an afternoon shift, so check the morning is not the same enginner
-                if (shifts[shiftId - 1].Engineer?.ID == candidateId)
+               /* if (shifts[shiftId - 1].Tasks?.EngineerId == candidateId)
                 {
                     return false;
                 }
                 else
                 {
                     return true;
-                }
+                }*/
             }
             else
             {
                 //Proposed shift is for a morning, we only check when populating the afternoon shift
                 return true;
             }
+            return false;
         }
     }
 

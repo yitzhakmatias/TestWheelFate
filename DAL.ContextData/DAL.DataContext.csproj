@@ -47,9 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Day.cs" />
     <Compile Include="Engineer.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shift.cs" />
+    <Compile Include="TaskEngineer.cs" />
     <Compile Include="WheelContext.cs" />
   </ItemGroup>
   <ItemGroup>

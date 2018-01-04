@@ -6,18 +6,16 @@ namespace DAL.DataContext
 {
     public class WheelContext : DbContext, IDbContext
     {
-        public WheelContext() : base("ApplicationDbContext")
+        public WheelContext() : base("name=WheelContext")
         {
         }
 
-        public DbSet<Engineer> Engineer { get; set; }
+        public DbSet<Engineer> Engineers { get; set; }
+        public DbSet<Shift> Shifts { get; set; }
+
+        public DbSet<TaskEngineer> Tasks { get; set; }
 
         //public DbSet<Author> Authors { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
 
         public ObjectResult<TEntity> SpObjectResult<TEntity>() where TEntity : class
         {

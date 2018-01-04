@@ -12,12 +12,13 @@ namespace DAL.DataContext
 
         public Shift(int i)
         {
-            this.Id = i;
+            this.ShiftId = i;
         }
 
-        public int Id { get; set; }
+        public int ShiftId { get; set; }
 
-        public Engineer Engineer { get; set; }
+
+        public virtual ICollection<TaskEngineer> Tasks { get; set; }
 
     }
 }

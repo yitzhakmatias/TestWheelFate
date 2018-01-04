@@ -30,7 +30,7 @@ namespace BL.Services.Provider
         public List<Shift> Generate(int shiftsPerPeriod, int shiftsPerEngineerPerPeriod)
         {            
             var shifts = new List<Shift>();
-            while (shifts.Count(x => x.Engineer != null) != shiftsPerPeriod)
+            while (shifts.Count(x => x.Tasks != null) != shiftsPerPeriod)
             {
                 // Create a pool of engineers to use for scheduling
                 var engineerPool = _engineerPoolFactory.Create(shiftsPerEngineerPerPeriod);

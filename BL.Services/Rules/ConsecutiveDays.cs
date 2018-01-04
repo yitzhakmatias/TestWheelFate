@@ -22,20 +22,20 @@ namespace BL.Services.Rules
                 if (isMorning)
                 {
                     //Proposed shift is for a morning - check the last 2 shifts are not for the same enginner
-                    if (shifts[shiftId - 1].Engineer?.ID == candidateId ||
-                        shifts[shiftId - 2].Engineer?.ID == candidateId)
+                    /*if (shifts[shiftId - 1].Tasks?. == candidateId ||
+                        shifts[shiftId - 2].Tasks?.EngineerId == candidateId)
                     {
                         return false;
-                    }
+                    }*/
                 }
                 else
                 {
                     //Proposd shift is for an afternoon - check the previous days shifts
-                    if (shifts[shiftId - 2].Engineer?.ID == candidateId ||
-                        shifts[shiftId - 3].Engineer?.ID == candidateId)
+                    /*/if (shifts[shiftId - 2].Engineer?.EngineerId == candidateId ||
+                        shifts[shiftId - 3].Engineer?.EngineerId == candidateId)
                     {
                         return false;
-                    }
+                    }*/
                 }
 
                 // The same enginner is not defined for the previous day, so the proposal is valid

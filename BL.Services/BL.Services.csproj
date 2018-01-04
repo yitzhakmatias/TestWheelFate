@@ -63,10 +63,15 @@
     <Compile Include="Provider\SequentialFillScheduleStrategy.cs" />
     <Compile Include="Repositories\EngineerRepository.cs" />
     <Compile Include="Repositories\IEngineerRepository.cs" />
+    <Compile Include="Repositories\IShiftRepository.cs" />
+    <Compile Include="Repositories\ITaskRepository.cs" />
+    <Compile Include="Repositories\ShiftRepository.cs" />
+    <Compile Include="Repositories\TaskRepository.cs" />
     <Compile Include="Rules\ConsecutiveDays.cs" />
     <Compile Include="Rules\IConsecutiveDays.cs" />
     <Compile Include="Rules\IShifts.cs" />
     <Compile Include="Rules\Shifts.cs" />
+    <Compile Include="Rules\TaskRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL.CORE\BL.CORE.csproj">

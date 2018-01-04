@@ -30,10 +30,10 @@ namespace BL.Services.Provider
                 Engineer candidate;
                 while (!foundSuitableCandiate && ((candidate = engineerPool.PullRandom()) != null))
                 {
-                    foundSuitableCandiate = _ruleEvaluator.IsValid(i, candidate.ID, shifts);
+                    foundSuitableCandiate = _ruleEvaluator.IsValid(i, candidate.EngineerId, shifts);
                     if (foundSuitableCandiate)
                     {
-                        shifts.Add(new Shift(i) { Engineer = candidate });
+                        shifts.Add(new Shift(i) { Tasks = candidate.Tasks });
                         engineerPool.Remove(candidate);
                         engineerPool.ResetPullables();
                     }
